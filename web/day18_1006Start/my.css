@@ -1,0 +1,49 @@
+body {
+    font-size: 20px; /*设置字体大小*/
+    background-color: rgb(243, 245, 247); /*设置背景颜色*/
+}
+
+#d1 {
+    position: fixed; /*固定定位;relative*/
+    left: 100px;
+    top: 100px;
+    width: 100px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    /*border: 3px #000 solid;*/
+    background-color: rgb(243, 245, 247);
+    box-shadow: 0px 1px 2px 2px #ddd;
+
+}
+
+#d2 {
+    /*margin-top: 1px;*/
+    margin-right: auto;
+    margin-left: auto;
+    /*margin-bottom: 1px;*/
+    width: 1000px;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #00a4ff;
+}
+
+a:visited {
+    color: blue;
+}
+
+a:hover {
+    color: red;
+}
+
+
+
+
+
+
+
+

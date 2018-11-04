@@ -1,0 +1,64 @@
+<!--
+    <!DOCTYPE html>
+    h5的文档声明，声明当前网页是按照HTML5标准编写
+    编写网页时一定要将h5的文档声明写在网页的最上边
+    如果不写文档声明，则会导致有些浏览器会进入一个怪异模式：浏览器解析页面会导致页面无法正常显示
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta标签用来设置网页的一些元数据，比如网页的字符集、关键字、简介 -->
+    <meta charset="UTF-8">
+    <title>第二天笔记</title>
+    <link rel="stylesheet" type="text/css" href="my.css">
+</head>
+<body>
+<!-- 导航栏 -->
+
+<div id="d1">
+    <ul style="list-style: none;padding: 0;">
+        <li><a href="#">回到顶部</a></li>
+        <li><a href="#">CSS的语法</a></li>
+        <li><a href="#">块和内联</a></li>
+        <li><a href="#">常用的选择器</a></li>
+        <li><a href="#">样式的继承</a></li>
+        <li><a href="#">选择器的优先级</a></li>
+        <li><a href="#">元素之间的关系</a></li>
+        <li><a href="#">文本标签</a></li>
+        <li><a href="#">列表</a></li>
+        <li><a href="#">单位</a></li>
+        <li><a href="#bottom">友情链接</a></li>
+    </ul>
+
+
+</div>
+
+<div id="d2">
+    <a href="http://www.w3school.com.cn/">多参考W3Cschool</a><br>
+    <hr>
+
+
+    <h2>字体的样式</h2>
+    1、font-size：设置的并不是文字本身的大小，在页面中，每个文字都是处在一个看不见的框中的，我们设置的font-size实际上是设置格的高度 <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; 并不是字体的大小，一般情况下文字都要比这个格要小一些 <br>
+    <br>
+    2、font-family：指定文字的字体；当采用某种字体时，如果浏览器支持则使用该字体，如果字体不支持，则使用默认字体； <br>
+    &nbsp;&nbsp;&nbsp;&nbsp; 该样式可以同时指定多个字体，浏览器会优先使用前边的字体，如果前边没有则使用默认字体； <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;浏览器使用的字体默认是计算机中已有的字体，如果计算机有则使用，没有则不使用 <br>
+    <br>
+    3、font-style：可以用来设置文字的斜体；属性值：normal：默认值 、 italic 文字以斜体显示 、 oblique 文字会以倾斜的效果显示 <br>
+
+
+</div>
+
+
+<div id="bottom" class="footer" style="width: 1000px;margin-left: auto;margin-right: auto;text-align: center;">
+    本笔记隶属于美利坚合众国 <br>
+    Copyright &COPY;2018 海智信息科技 版权所有 <br>
+    友情链接：<a href="http://ascentbyc.xyz/files/note/day01/note01.html">上一天</a>
+    | <a href="http://ascentbyc.xyz/files/note/day01/note01.html">下一天</a>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,148 @@
+<!--
+    <!DOCTYPE html>
+    h5的文档声明，声明当前网页是按照HTML5标准编写
+    编写网页时一定要将h5的文档声明写在网页的最上边
+    如果不写文档声明，则会导致有些浏览器会进入一个怪异模式：浏览器解析页面会导致页面无法正常显示
+ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- meta标签用来设置网页的一些元数据，比如网页的字符集、关键字、简介 -->
+    <meta charset="UTF-8">
+    <title>第一天笔记</title>
+    <link rel="stylesheet" type="text/css" href="http://ascentbyc.xyz/files/css/day01/my.css">
+</head>
+<body>
+<!-- 导航栏 -->
+<div id="d1">
+    <ul style="list-style: none;padding: 0;">
+        <li><a href="#">回到顶部</a></li>
+        <li><a href="#biaoqian">常用标签</a></li>
+        <li><a href="#shiti">实体</a></li>
+        <li><a href="#img">图片标签</a></li>
+        <li><a href="#meta">meta</a></li>
+        <li><a href="#xhtml">xHTML的语法规范</a></li>
+        <li><a href="#iframe">内联框架</a></li>
+        <li><a href="#abiaoqian">超链接</a></li>
+        <li><a href="#css">css简介</a></li>
+        <li><a href="#bottom">友情链接</a></li>
+    </ul>
+
+
+</div>
+
+<div id="d2" style="margin-bottom: 400px">
+    <a href="http://www.w3school.com.cn/">多参考W3Cschool</a><br>
+    <hr>
+    结构：HTML用于描述页面的结构<br>
+    表现：CSS用于控制页面中元素的样式<br>
+    行为：JavaScript用于响应用户操作<br>
+    <h1>一级标题&LT;h1&GT;</h1>
+    <hr>
+    &LT;html&GT;：根标签<br>
+    <!--
+        属性：
+            可以通过属性来设置标签中的内容
+            一个名值对的结构：属性名="属性值"
+
+     -->
+    &LT;font&GT;：<font color="red" size="5">可以设置内容的属性,不赞成使用这个标签</font><br>
+    元素==标签<br>
+    &LT;meta&GT;：meta标签用来设置网页的一些元数据，比如网页的字符集、关键字、简介<br>
+    <br><br>
+    <hr>
+    <h1 id="biaoqian">常用的标签</h1>
+    1、标题元素:&LT;h1&GT;&LT;h2&GT;&LT;h3&GT;&LT;hx&GT;<br>
+    html标签只关心标签的语义，h1为网页中的最重要的内容，h2~h6依次降低<br>
+    h1标签非常重要，它会影响到页面在搜索引擎中的排名，页面只能写一个h1<br>
+    &LT;p&GT;：段落标签,默认独占一行，段与段之间会有一个间距<p>段落标签</p>
+    html中多个空格也会当成一个空格解析<br>
+    &LT;br&GT;：br标签是一个自结束标签<br>
+    &LT;hr&GT;：hr也是一个自结束标签,换行会加一条横线
+    <hr>
+    <h2 id="shiti">实体</h2>
+    在HTML中，一些特殊字符不能直接使用，可以用一些特殊符号，称为实体（转义字符串）,如空格、小于号、大于号等<br>
+    <hr>
+    <h2 id="img">图片标签</h2>
+    使用&LT;img src="图片路径" alt="图片描述" width="图片宽度" height="图片高度"&GT;：标签来向网页引入一个外部图片，该标签也是一个自结束标签，
+    alt属性可以用来设置在图片不能显示时，对图片的描述，宽度和高度如果指设置了一个，另一个也会同时等比例调整大小，开发时不建议设置width和height属性<br>
+    <img src="海智团队logo.jpg"><br>
+    图片格式问题：多种图片格式;1:效果不一致，使用效果好的；2：效果一致，使用小的<br>
+    JPEG(JPG):1、JPEG图片支持的颜色比较多，图片可以压缩，但不支持透明；2、一般使用JPEG来保存照片等颜色丰富的图片<br>
+    GIF:1、GIF支持的颜色少，只支持简单的透明，支持动态图；2、图片颜色单一或者是动态图时可以使用gif<br>
+    PNG：1、PNG支持的颜色多，并且支持复杂的透明；2、可以用来显示颜色复杂的透明图片<br>
+    <hr>
+    <h2 id="meta">meta标签</h2>
+    meta标签的内容是给搜索浏览器、引擎看的。搜索引擎在检索页面时，会同时检索页面中的关键词和描述，
+    但是这两个值不会影响页面在搜索引擎中的排名<br>
+    &LT;meta&GT;：使用meta标签还可以用来设置网页的关键字<br>
+    &LT;meta name-"keywords" content="HTML5,JavScript" /&GT;<br>
+    还可以用来指定网页的描述<br>
+    &LT;meta name-"description" content="HTML5,JavScript" /&GT;<br>
+    使用meta可以用来做请求的重定向,如5秒后跳转到baidu的首页<br>
+    &LT;meta http-equiv="refresh" content="5;url=http://www.baidu.com" /&GT;<br>
+    <hr>
+    <h2 id="xhtml">xHTML的语法规范</h2>
+    1、HTML中不区分大小写，但一般使用小写<br>
+    2、HTML中的注释不能嵌套<br>
+    3、HTML标签必须结构完整，要么成对出现，要么自结束标签 <br><!-- 浏览器会最大限度的自动修正页面错误内容 -->
+    4、HTML可以嵌套，但不能交叉嵌套 <br>
+    5、HTML标签中的属性必须有值，且值必须加引号 <br>
+    <hr>
+    <h2 id="iframe">内联框架</h2>
+    使用内联框架可以引入一个外部的页面 <br>
+    &LT;iframe src="xxx"&GT;:使用iframe来创建一个内联框架 <br>
+    在现实开发中不推荐使用内联框架，因为内联框架中的内容不会被搜索引擎所检索 <br>
+    <iframe src="http://www.w3school.com.cn/" name="iframename"
+            style="width: 700px;height: 300px;overflow-x:auto; overflow-y:auto;" scrolling="auto"></iframe>
+    <hr>
+    <h2 id="abiaoqian">超链接</h2>
+    如果将超链接地址设置为#，点击超链接以后，会自动跳转到当前页面的顶部 <br>
+    id属性是同一个页面中的标签的唯一标识，地址为id可跳转到该id的位置 <br>
+    href="mailto:邮箱地址" ： 该格式地址可以给该邮箱发邮件 <br>
+    <a href="mailto:2437341214@qq.com">给我发邮件</a> <br>
+    a标签中的target属性可以用来指定打开链接的位置，可选值：<br>
+    1、_self，表示在当前窗口中打开（默认值）；<br>
+    2、_blank，在新的窗口中打开链接； <br>
+    3、可以设置一个内联框架的name属性值，链接将会在指定的内联框架中打开； <br>
+    <a href="https://wx.qq.com/" target="iframename">在内联框架中打开微信</a> <br>
+    <hr>
+    &LT;center&GT;:center可以将内容在中间显示，但不赞成使用 <br>
+    <hr>
+    <h2 id="css">css简介</h2>
+    层叠样式表（Cascading Style Sheets） <br>
+    css可以用来为网页创建样式表，通过样式表可以对网页进行装饰 <br>
+    层叠：可以将整个网页想象成是一层一层的结构，层次高的将会覆盖层次低的 <br>
+    css可以分别为网页各个层次设置样式 <br>
+    <a href="http://ascentbyc.xyz/files/css/day01/my.css" target="csstable">点击查看样式表</a><br>
+    <iframe src="" name="csstable" style="width: 700px;height: 300px;overflow-x:auto; overflow-y:auto;"
+            frameborder="0"></iframe>
+    <br>
+    在标签中的 style 属性的功能和 css样式表 是一样的 <br>
+    可以在head标签中嵌套一个style标签来批量写样式 <br>
+    &LT;style type="text/css"&GT; <br>
+    a&nbsp;{&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;color : red; &nbsp;&nbsp;&nbsp;&nbsp;<br>
+    } &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+    &LT;/style&GT;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp; <br>
+    <br>
+    一般是把样式写到外部的css文件，用 link标签 引入外部的css文件 <br>
+    将CSS样式统一编写到外部的样式表中，完全使结构和表现分离，可以使样式表可以在不同的页面中使用，
+    最大限度的使样式可以进行复用，将样式统一写在样式表中，然后通过link标签引入，可以利用浏览器的缓存，加快用户访问的速度提高了用户的体验，
+    所以在开发中推荐使用的方式是引入外部的CSS文件 <br>
+    &LT;link rel="stylesheet" type="text/css" href="css的路径" /&GT; <br>
+
+
+</div>
+
+<div id="bottom" class="footer" style="width: 1000px;margin-left: auto;margin-right: auto;text-align: center;">
+    本笔记隶属于美利坚合众国 <br>
+    Copyright &COPY;2018 海智信息科技 版权所有 <br>
+    友情链接：<a href="http://ascentbyc.xyz/files/note/day02/note02.html">下一天</a>
+
+</div>
+
+</body>
+</html>
