@@ -24,7 +24,7 @@ class child extends TestIdea{
 
     @Test
     public void test1() {
-
+        System.out.println();
     }
 
     public static void main(String[] args) {
